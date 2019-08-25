@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="LogDumperLib:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/LogDumperLib_jar</output-path>
+    <root id="archive" name="LogDumperLib.jar">
+      <element id="module-output" name="LogDumperLib" />
+    </root>
+  </artifact>
+</component>
