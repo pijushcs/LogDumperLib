@@ -21,7 +21,7 @@ logDumper.error("Error Log");
 
 > The logger instance is a singleton as only once such logger should be there for a particular cleint.
 
-> While generating a log, the library calls the logging method in async mode that takes an exclusive lock on the client log file before appending the log.
+> While generating a log, the library calls the logging method in async mode that takes an exclusive lock on the client log-file before appending the log.
 
 ---
 
@@ -30,7 +30,7 @@ logDumper.error("Error Log");
 The interface the client should use and defines the required methods to be implemented.
 
 > <b>LogDumperImpl:</b>   
-The default implementation fo the LogDumper that takes care of the backgrond workog logging.
+The default implementation fo the LogDumper that takes care of the backgrond work of async logging.
 
 > <b>Constants:</b>   
 The class has a few Constants and Enums.
