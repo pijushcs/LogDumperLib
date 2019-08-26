@@ -21,7 +21,7 @@ logDumper.error("Error Log");
 
 > The logger instance is a singleton as only once such logger should be there for a particular cleint.
 
-> While generating a log, the library calls the logging method in async mode that takes an exclusive lock on the client log-file before appending the log.
+> Each client writes to a seperate log-file and while generating a single log, the library calls the logging method in async mode that takes an exclusive lock on the client log-file before appending the log.
 
 ---
 
