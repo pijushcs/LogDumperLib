@@ -1,5 +1,5 @@
 #### `LogDumperLib Library:`
-The LogDumperLib supports clients to add logs asynchronously and doesn't block the client application.
+The library provides a simple interface to the Client applications for registering to LogDumper and using the logger provided by the library. The LogDumperLib supports clients to add logs asynchronously and doesn't block the client application.
 
 <b>Usage:</b>   
 ```Java
