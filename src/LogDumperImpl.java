@@ -75,10 +75,11 @@ public class LogDumperImpl implements LogDumper {
      */
     @Override
     public void info(String userMsg) {
+        // Note: The time-stamp is created here itself as the order of logging is not known for async methods
+        String dateStr = new Date().toString();
         CompletableFuture.runAsync(() -> {
             try {
-                // Note: The time-stamp is created here itself as the order of logging is not known for async methods
-                lockAndLogUserMessage(new Date().toString(), userMsg, Constants.INFO_TYPE);
+                lockAndLogUserMessage(dateStr, userMsg, Constants.INFO_TYPE);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -91,9 +92,10 @@ public class LogDumperImpl implements LogDumper {
      */
     @Override
     public void error(String userMsg) {
+        String dateStr = new Date().toString();
         CompletableFuture.runAsync(() -> {
             try {
-                lockAndLogUserMessage(new Date().toString(), userMsg, Constants.ERROR_TYPE);
+                lockAndLogUserMessage(dateStr, userMsg, Constants.ERROR_TYPE);
             } catch (IOException e) {
                 e.printStackTrace();
             }
